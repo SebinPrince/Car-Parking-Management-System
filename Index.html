@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-bar">
+        <h1>Vehicle Registration System</h1>
+    </header>
+
+    <main class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Add New Vehicle</h2>
+            <form id="vehicleForm">
+                <div class="input-group">
+                    <label for="vehicleNumber">Vehicle Number</label>
+                    <input type="text" id="vehicleNumber" name="vehicleNumber" required placeholder="e.g. AB-12-CD-3456">
+                </div>
+                <div class="input-group">
+                    <label for="ownerName">Owner Name</label>
+                    <input type="text" id="ownerName" name="ownerName" required placeholder="Enter owner name">
+                </div>
+                <div class="input-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department" required placeholder="Enter department">
+                </div>
+                <div class="input-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required placeholder="Enter mobile number">
+                </div>
+                <button type="submit" class="btn-primary">Add Vehicle</button>
+            </form>
+        </section>
+
+        <!-- List Section -->
+        <section class="list-section">
+    <h2>Vehicle List</h2>
+
+    <!-- 🔍 Search Box (ADD HERE) -->
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search by Vehicle Number..." 
+            onkeyup="searchVehicle()"
+        >
+    </div>
+
+    <div class="table-container">
+        <table id="vehicleTable">
+            <thead>
+                <tr>
+                    <th>Vehicle Number</th>
+                    <th>Owner Name</th>
+                    <th>Department</th>
+                    <th>Mobile Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="vehicleListBody">
+                <!-- Vehicle rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="emptyMessage" class="empty-message">
+        No vehicles registered currently.
+    </div>
+</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
