@@ -117,20 +117,6 @@ body {
     font-size: 1.4rem;
 }
 
-/* 🔍 Search Box (ADDED HERE) */
-.search-box {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.search-box input {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Table */
 .table-container {
     overflow-x: auto;
 }
@@ -179,5 +165,46 @@ td {
     text-align: center;
     color: #718096;
     padding: 2rem;
-    display: none;
+    display: none; /* Hidden by default */
+}
+
+/* Login Page Styles */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4318FF, #868CFF);
+}
+
+.login-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #2b3674;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #a0aec0;
+    font-size: 0.85rem;
 }
