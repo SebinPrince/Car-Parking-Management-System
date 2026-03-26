@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header-bar">
-        <h1>Vehicle Registration System</h1>
+    <header class="header-bar" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">Vehicle Registration System</h1>
+        <button id="logoutBtn" class="btn-delete" style="margin: 0; padding: 0.5rem 1rem; border-radius: 6px;">Logout</button>
     </header>
 
     <main class="container">
@@ -40,42 +41,29 @@
 
         <!-- List Section -->
         <section class="list-section">
-    <h2>Vehicle List</h2>
-
-    <!-- 🔍 Search Box (ADD HERE) -->
-    <div class="search-box">
-        <input 
-            type="text" 
-            id="searchInput" 
-            placeholder="Search by Vehicle Number..." 
-            onkeyup="searchVehicle()"
-        >
-    </div>
-
-    <div class="table-container">
-        <table id="vehicleTable">
-            <thead>
-                <tr>
-                    <th>Vehicle Number</th>
-                    <th>Owner Name</th>
-                    <th>Department</th>
-                    <th>Mobile Number</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="vehicleListBody">
-                <!-- Vehicle rows will be inserted here dynamically -->
-            </tbody>
-        </table>
-    </div>
-
-    <div id="emptyMessage" class="empty-message">
-        No vehicles registered currently.
-    </div>
-</section>
+            <h2>Vehicle List</h2>
+            <div class="table-container">
+                <table id="vehicleTable">
+                    <thead>
+                        <tr>
+                            <th>Vehicle Number</th>
+                            <th>Owner Name</th>
+                            <th>Department</th>
+                            <th>Mobile Number</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vehicleListBody">
+                        <!-- Vehicle rows will be inserted here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="emptyMessage" class="empty-message">
+                No vehicles registered currently.
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
 </body>
 </html>
-
