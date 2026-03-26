@@ -31,8 +31,20 @@ const Vehicle = mongoose.model('Vehicle', vehicleSchema);
 
 // --- REST API ENDPOINTS ---
 
+// Simple Login Endpoint
+app.post('/api/login', (req, res) => {
+    const { username, password } = req.body;
+    
+    // Hardcoded credentials for simplicity as requested "only with username and password"
+    if (username === 'admin' && password === 'admin') {
+        res.status(200).json({ message: 'Login successful' });
+    } else {
+        res.status(401).json({ error: 'Invalid username or password' });
+    }
+});
+
 // 1. POST /add → Add vehicle
-app.post('/add', async (req, res) => {//api call(new data insertion)
+app.post('/add', async (req, res) => {
     try {
         const { vehicleNumber, ownerName, department, mobileNumber } = req.body;
         
