@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:3000';
 const loginForm = document.getElementById('loginForm');
 const loginError = document.getElementById('loginError');
 
@@ -23,7 +23,7 @@ loginForm.addEventListener('submit', async (e) => {
             // Store simple token or flag in local storage
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('username', username);
-            
+
             // Redirect to main page
             window.location.href = 'index.html';
         } else {
