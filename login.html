@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body class="login-body">
     <div class="login-container">
         <div class="login-header">
@@ -22,14 +24,18 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required placeholder="Enter your password">
             </div>
-            <div id="loginError" class="error-message" style="display: none; color: #e53e3e; margin-top: 10px; font-size: 0.9rem; text-align: center;"></div>
+            <div id="loginError" class="error-message"
+                style="display: none; color: #e53e3e; margin-top: 10px; font-size: 0.9rem; text-align: center;"></div>
             <button type="submit" class="btn-primary" style="width: 100%;">Login</button>
         </form>
         <div class="login-footer">
             <p>Default credentials: admin / admin</p>
+            <p style="margin-top: 10px;">Don't have an account? <a href="signup.html" style="color: #4a5568;">Sign up
+                    here</a>.</p>
         </div>
     </div>
 
     <script src="login.js"></script>
 </body>
+
 </html>
