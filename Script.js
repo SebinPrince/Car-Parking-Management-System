@@ -60,7 +60,7 @@ async function fetchVehicles() {
     try {
         const response = await fetch(`${API_URL}/vehicles`);
         const vehicles = await response.json();
-        
+
         // Clear current list
         vehicleListBody.innerHTML = '';
 
@@ -76,7 +76,7 @@ async function fetchVehicles() {
             // Loop through fetched vehicles and add to DOM
             vehicles.forEach(vehicle => {
                 const tr = document.createElement('tr');
-                
+
                 tr.innerHTML = `
                     <td>${vehicle.vehicleNumber}</td>
                     <td>${vehicle.ownerName}</td>
@@ -86,7 +86,7 @@ async function fetchVehicles() {
                         <button class="btn-delete" onclick="deleteVehicle('${vehicle._id}')">Delete</button>
                     </td>
                 `;
-                
+
                 vehicleListBody.appendChild(tr);
             });
         }
